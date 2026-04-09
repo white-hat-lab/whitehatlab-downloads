@@ -4,7 +4,7 @@
 
 <h1 align="center">White-Hat-Labs</h1>
 <p align="center">AI-Powered Security Testing Suite</p>
-<p align="center"><a href="ABOUT.md">About the Scanners</a></p>
+<p align="center"><a href="ABOUT.md">About</a> · <a href="GALLERY.md">Screenshots</a></p>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/white-hat-lab/whitehatlab-downloads/main/screenshot.png" width="900" alt="White-Hat-Labs Scanner — 46 findings at 24% scan progress">
