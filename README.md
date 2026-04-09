@@ -30,6 +30,23 @@ Network security assessment — port scanning, service detection, vulnerability 
 
 ---
 
+## Tools
+
+### The Read-Out v1.0
+Transform raw scans into boardroom-ready reports. Upload multiple DAST scan reports and a customer template — The Read-Out merges findings by vulnerability type, deduplicates instances, and generates a polished unified report in seconds.
+
+**[Download (Mac / Windows / Linux)](https://github.com/naik0204/whitehatlab-downloads/releases/download/v1.0-readout/TheReadOut.zip)** | **[Release Notes](https://github.com/naik0204/whitehatlab-downloads/releases/tag/v1.0-readout)**
+
+```bash
+# Quick Start:
+unzip TheReadOut.zip && cd Report_App
+pip install flask python-docx
+python3 app.py
+# Open http://localhost:5055
+```
+
+---
+
 ## Prerequisites
 
 1. Install [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code): `npm install -g @anthropic-ai/claude-code`
