@@ -4,6 +4,7 @@
 
 <h1 align="center">White-Hat-Labs</h1>
 <p align="center">AI-Powered Security Testing Suite</p>
+<p align="center"><a href="ABOUT.md">About the Scanners</a></p>
 
 ---
 
