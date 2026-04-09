@@ -6,6 +6,11 @@
 <p align="center">AI-Powered Security Testing Suite</p>
 <p align="center"><a href="ABOUT.md">About the Scanners</a></p>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/white-hat-lab/whitehatlab-downloads/main/screenshot.png" width="900" alt="White-Hat-Labs Scanner — 46 findings at 24% scan progress">
+</p>
+<p align="center"><em>AI agent scanning a web application — 46 vulnerabilities found at 24% progress</em></p>
+
 ---
 
 ## Scanners
