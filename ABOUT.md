@@ -1,102 +1,129 @@
-# About White-Hat-Labs Security Scanners
+# White-Hat-Labs
 
-## Web Application Pentesting (DAST)
+# Web Application Pentesting Tool
 
-AI-driven Dynamic Application Security Testing. Give it a URL — the AI agent does the rest.
+**AI Agent-Based Pentesting — No Noise. No Guesswork. No False Positives.**
 
-### How It Works
-1. Paste target URLs
-2. AI agent crawls and discovers all endpoints, forms, parameters
-3. Tests every endpoint for vulnerabilities autonomously
-4. Reports confirmed findings with evidence, payloads, and reproduction steps
+## What This Is
 
-### What It Tests
-- SQL Injection (error, blind, time-based)
-- Cross-Site Scripting (reflected, stored, DOM)
-- Command Injection
-- Path Traversal / LFI / RFI
-- Server-Side Request Forgery (SSRF) with OOB callback confirmation
-- XML External Entity (XXE)
-- Broken Access Control / IDOR
-- JWT Vulnerabilities
-- File Upload Attacks
-- Open Redirects / CSRF
-- LLM Prompt Injection
-- Authorization bypass testing
+This is **not a traditional DAST scanner**.
 
-### Features
-- Real-time scan logs
-- Chat with the AI agent mid-scan
-- Proxy tab showing all HTTP traffic
-- Professional DOCX and CSV reports with evidence, request, response, and reproduce (curl)
-- Resume scans — old findings preserved
-- Authentication support (login-protected apps)
-- OOB callback server for blind SSRF/XXE confirmation
+This is an **AI-powered web application pentesting tool** where you **chat with an agent** that performs real security testing.
 
----
+- No rule-based scanning
+- No payload spraying
+- No fake findings
 
-## SAST + SCA Scanner
+It's a Claude agent with MCP tools — **thinks, tests, and validates vulnerabilities like a human pentester.**
 
-Static Application Security Testing + Software Composition Analysis.
+## How It Works
 
-### How It Works
-1. Upload source code (ZIP) or provide a GitHub repo URL
-2. 11-step analysis pipeline runs automatically
-3. AI agent verifies findings and eliminates false positives
+1. **Smart Discovery**
+   - Headless browser finds real endpoints, forms, and parameters
 
-### Analysis Pipeline
-1. Pattern scanning (regex-based vulnerability detection)
-2. Secrets detection (API keys, passwords, tokens)
-3. Infrastructure as Code (IaC) scanning
-4. WebQL analysis
-5. CodeQL analysis (deep semantic code analysis)
-6. API Security (OWASP API Top 10)
-7. LLM Security (OWASP LLM Top 10)
-8. AI Bundle Scan
-9. Deduplication
-10. AI Verification (eliminates false positives)
-11. False Negative Detection (finds missed vulnerabilities)
+2. **Input Validation (Canary + Baseline)**
+   - Identifies which inputs actually work
+   - Ignores dead/unused parameters
 
-### Features
-- Supports multiple languages (Python, Java, JavaScript, Go, C#, Ruby, PHP)
-- SCA dependency scanning with CVE mapping
-- Incremental scanning (only changed files)
-- Professional reports
+3. **AI Pentesting Agent (Claude)**
+   - Decides attack strategy
+   - Executes real tests
+   - Validates exploitability
 
----
+4. **MCP Tools (Execution Layer)**
+   - Agent uses MCP (Model Context Protocol) to:
+     - Send requests
+     - Authenticate
+     - Navigate browser
+     - Extract responses
+     - Report findings
 
-## Network Security Scanner
+MCP comes from the **Claude Code ecosystem (Anthropic)** and connects the agent to real tools.
 
-Network security assessment powered by Claude AI.
+## Why This Is Different
 
-### Features
-- Port scanning and service detection
-- 19 MCP tools for comprehensive testing
-- 11 pentest tools from scripts
-- Vulnerability assessment against discovered services
-- Professional reports
+- Chat-driven pentesting
+- Agent decides what to test (not hardcoded rules)
+- Tests only real inputs
+- Every finding is validated
+- No false positives
 
----
+## Installation
 
-## The Read-Out — Report Generator
+### Mac
+- Download WhiteHatLabs.app
+- Unzip
+- Run: `xattr -cr WhiteHatLabs.app`
+- Double-click to open
 
-Transform raw scans into boardroom-ready reports.
+### Windows
+- Download WhiteHatLabs.exe
+- Run the app
 
-### Features
-- Upload multiple scan reports
-- Upload customer template
-- Merges findings by vulnerability type
-- Deduplicates instances across scans
-- Generates polished unified report in seconds
+Python is bundled — no setup needed.
+App opens at: **http://localhost:5050**
 
----
+## Prerequisite (Required)
 
-## Prerequisites
+Install and login to Claude (AI agent):
 
-All scanners require:
-1. **Claude Code CLI** — `npm install -g @anthropic-ai/claude-code`
-2. Run `claude` once to sign in with your Anthropic account
+```bash
+npm install -g @anthropic-ai/claude-code
+claude
+```
 
-## Support
-- Email: support@aisecurityscanners.dev
-- Website: [white-hat-lab.com](https://white-hat-lab.com)
+## How to Use
+
+1. Open **http://localhost:5050**
+2. Paste target URL(s)
+3. (Optional) Add login credentials
+4. Confirm authorization
+5. Click **Start Assessment**
+
+## Monitor
+
+- Live logs show what the agent is doing
+- Proxy tab shows all HTTP requests
+- Findings appear in real-time
+
+## Results + Chat
+
+- View report in **Report tab**
+- Download:
+  - CSV
+  - DOCX (pentest report)
+- Use chat to:
+  - Validate findings
+  - Retest endpoints
+  - Run targeted checks
+
+## Resume or Stop
+
+- **Resume Assessment** → continue previous scan
+- **Clean (Stop All & Save)** → stop and save results
+
+## Supported URL Formats
+
+```
+http://target.com/api/users
+http://target.com/search?q=test
+POST http://target.com/login
+PUT http://target.com/api/users/1
+DELETE http://target.com/api/users/1
+```
+
+## Tech Stack
+
+- Python (Flask)
+- Playwright
+- Claude Code CLI
+- MCP (Model Context Protocol)
+- SQLite
+
+## Contact
+
+support@aisecurityscanners.dev
+
+## Disclaimer
+
+Only test systems you are authorized to assess.
