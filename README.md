@@ -1,79 +1,31 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/white-hat-lab/whitehatlab-downloads/main/logo.png" width="120" alt="White-Hat-Labs">
-</p>
+# Web Application Pentesting (DAST) v1.2
 
-<h1 align="center">White-Hat-Labs</h1>
-<p align="center">AI-Powered Security Testing Suite</p>
-<p align="center"><a href="ABOUT.md">About</a> · <a href="GALLERY.md">Screenshots</a></p>
+White Hat Labs pentest workbench for web application security testing.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/white-hat-lab/whitehatlab-downloads/main/screenshot.png" width="900" alt="White-Hat-Labs Scanner — 46 findings at 24% scan progress">
-</p>
-<p align="center"><em>AI agent scanning a web application — 46 vulnerabilities found at 24% progress</em></p>
+## Features
 
----
+- Scanner workflow with Codex-backed agent testing
+- Crawler and Burp-assisted endpoint import
+- Per-engagement storage for proxy rows, logs, findings, coverage, and reports
+- Report export with evidence, retest steps, PoC, curl commands, and clickable URLs
+- Burp Suite integration helper and request normalization
+- Template-based pentest report generation
 
-## Scanners
-
-### Web Application Pentesting (DAST) v1.2
-Agentic penetration testing using Claude AI. Paste URLs, the AI agent discovers attack surfaces, tests for OWASP Top 10 vulnerabilities, and reports confirmed findings with evidence.
-
-**[Download Mac](https://github.com/white-hat-lab/whitehatlab-downloads/releases/download/v1.2-dast/WhiteHatLabs-DAST-v1.2-Mac.zip)** | **[Download Windows](https://github.com/white-hat-lab/whitehatlab-downloads/releases/download/v1.2-dast/WhiteHatLabs-DAST-v1.2.exe)** | **[Release Notes](https://github.com/white-hat-lab/whitehatlab-downloads/releases/tag/v1.2-dast)**
-
----
-
-### SAST + SCA Scanner v1.0
-Static Application Security Testing + Software Composition Analysis. Upload source code or provide a GitHub repo URL for 11-step analysis with AI verification.
-
-**[Download Mac](https://github.com/white-hat-lab/whitehatlab-downloads/releases/download/v1.0-sast/WhiteHatLabs-SAST-v1.0-Mac.zip)** | **[Download Windows](https://github.com/white-hat-lab/whitehatlab-downloads/releases/download/v1.0-sast/WhiteHatLabs-SAST-v1.0.exe)** | **[Release Notes](https://github.com/white-hat-lab/whitehatlab-downloads/releases/tag/v1.0-sast)**
-
----
-
-### Network Security Scanner v1.0
-Network security assessment — port scanning, service detection, vulnerability checks powered by Claude AI.
-
-**[Download Mac](https://github.com/white-hat-lab/whitehatlab-downloads/releases/download/v1.0-network/WhiteHatLabs-Network-v1.0-Mac.zip)** | **[Download Windows](https://github.com/white-hat-lab/whitehatlab-downloads/releases/download/v1.0-network/WhiteHatLabs-Network-v1.0.exe)** | **[Release Notes](https://github.com/white-hat-lab/whitehatlab-downloads/releases/tag/v1.0-network)**
-
----
-
-## Tools
-
-### The Read-Out v1.0 — Report Generator
-Transform raw scans into boardroom-ready reports. Upload multiple scan reports and a customer template — The Read-Out merges findings by vulnerability type, deduplicates instances, and generates a polished unified report in seconds.
-
-**[Download (Mac / Windows / Linux)](https://github.com/white-hat-lab/whitehatlab-downloads/releases/download/v1.0-readout/TheReadOut.zip)** | **[Release Notes](https://github.com/white-hat-lab/whitehatlab-downloads/releases/tag/v1.0-readout)**
+## Run
 
 ```bash
-# Quick Start:
-unzip TheReadOut.zip && cd Report_App
-pip install flask python-docx
-python3 app.py
-# Open http://localhost:5055
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python3 main.py
 ```
 
----
+Open:
 
-## Prerequisites
-
-1. Install [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code): `npm install -g @anthropic-ai/claude-code`
-2. Run `claude` once in terminal to sign in
-
-## Quick Start (macOS)
-```bash
-# After downloading and unzipping:
-xattr -cr WhiteHatLabs.app    # Required once — removes macOS quarantine
-open WhiteHatLabs.app          # Opens the scanner
+```text
+http://localhost:5051/
 ```
 
-## Quick Start (Windows)
-1. Download the .exe
-2. If SmartScreen blocks: Click **"More info"** > **"Run anyway"**
-3. Open `http://localhost:5050` in your browser
+## Notes
 
----
-
-## Support
-- Email: support@aisecurityscanners.dev
-- Website: [white-hat-lab.com](https://white-hat-lab.com)
-
-Built by [White-Hat-Labs](https://white-hat-lab.com)
+Runtime data is stored outside the repo under the local user data directories. Do not commit generated databases, scan state, exports, or screenshots unless they are intended release assets.
