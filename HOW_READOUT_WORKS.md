@@ -10,13 +10,13 @@ It is a report generator only. It does not scan targets.
 
 ## Report Template
 
-Upload the active customer DOCX template. The app stores it as:
+Upload the active customer DOCX template. The app stores it locally as:
 
 ```text
 report_templates/default_pentest_template.docx
 ```
 
-The final DOCX is generated from that template.
+No private template is bundled in the public download. Each user must upload their own template. The final DOCX is generated from that uploaded template.
 
 ## Source Reports
 
