@@ -46,10 +46,12 @@ Transform raw scans into boardroom-ready reports. Upload multiple scan reports a
 ```bash
 # Quick Start:
 unzip TheReadOut.zip && cd Report_App
-pip install flask python-docx
+pip install -r requirements.txt
 python3 app.py
 # Open http://localhost:5055
 ```
+
+Docs: [Installation](READOUT_INSTALLATION.md) · [How The Read-Out Works](HOW_READOUT_WORKS.md)
 
 ---
 
