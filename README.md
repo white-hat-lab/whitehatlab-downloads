@@ -38,10 +38,10 @@ Network security assessment — port scanning, service detection, vulnerability 
 
 ## Tools
 
-### The Read-Out v1.0 — Report Generator
+### The Read-Out v1.1 — Report Generator
 Transform raw scans into boardroom-ready reports. Upload multiple scan reports and a customer template — The Read-Out merges findings by vulnerability type, deduplicates instances, and generates a polished unified report in seconds.
 
-**[Download (Mac / Windows / Linux)](https://github.com/white-hat-lab/whitehatlab-downloads/releases/download/v1.0-readout/TheReadOut.zip)** | **[Release Notes](https://github.com/white-hat-lab/whitehatlab-downloads/releases/tag/v1.0-readout)**
+**[Download (Mac / Windows / Linux)](https://github.com/white-hat-lab/whitehatlab-downloads/releases/download/v1.1-readout/TheReadOut.zip)** | **[Release Notes](https://github.com/white-hat-lab/whitehatlab-downloads/releases/tag/v1.1-readout)**
 
 ```bash
 # Quick Start:

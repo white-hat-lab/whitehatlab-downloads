@@ -1,4 +1,4 @@
-# The Read-Out v1.0 Installation
+# The Read-Out v1.1 Installation
 
 The Read-Out is a standalone report generator. It does not require the Pentest app, Burp, Codex, Claude, or a scanner to be running.
 
