@@ -1,10 +1,10 @@
 # White Hat Labs DAST Installation
 
-This guide is for `WhiteHatLabs-DAST-v1.2`.
+This guide is for the legacy `WhiteHatLabs-DAST-v1.2` package. It does not contain the current private-source fixes; see [CURRENT_SCANNER_RELEASE_STATUS.md](CURRENT_SCANNER_RELEASE_STATUS.md).
 
 ## Downloads
 
-Download the latest packaged app from:
+Download the retained legacy packaged app from:
 
 https://github.com/white-hat-lab/whitehatlab-downloads/releases/tag/v1.2-dast
 
@@ -94,7 +94,7 @@ http://localhost:5051
 
 ## Docker Notes
 
-If a Docker build is provided, run it with port mapping:
+No public Docker image is currently published because its Python files would be extractable. For an authorized private image build, run it with port mapping:
 
 ```bash
 docker run -p 5051:5051 whitehatlabs-pentest
