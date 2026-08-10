@@ -5,7 +5,7 @@ Click any image to view full size.
 ## Web Application Pentesting (DAST)
 
 ### Scanner — Live Scan
-[![Scanner](screenshots/scan-live.png)](screenshots/scan-live.png)
+[![Scanner](screenshot.png)](screenshot.png)
 *AI agent scanning a web application — discovering and testing endpoints in real-time*
 
 ### Report — Findings Summary
