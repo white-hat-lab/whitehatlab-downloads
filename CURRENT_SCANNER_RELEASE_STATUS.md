@@ -1,8 +1,10 @@
 # Current scanner release status
 
-Updated August 10, 2026.
+Updated September 4, 2026.
 
-The DAST v1.2, SAST/SCA v1.0, and network v1.0 downloads are legacy packages. They remain available for historical access, but they are not presented as builds of the current fixed scanner code.
+The native DAST v1.2, SAST/SCA v1.0, and network v1.0 releases do not represent the current scanner source. The main SAST/SCA download instructions now use Docker.
+
+The SAST/SCA container build, startup health check, and publication job succeeded in the August 10 release workflow. Its Linux AMD64 image is available at `ghcr.io/white-hat-lab/whitehat-all-sast-sca:latest` to authorized accounts. Registry manifest access was verified on September 4. Full local scan validation is pending; Docker was not running on the validation machine. An overall workflow failure must not be interpreted as failure of every component job.
 
 The current scanner source is maintained privately. Its Docker delivery definitions and Compose configuration have been updated with separate DAST, SAST/SCA, and network build contexts. Those definitions exclude local credentials, reports, scan databases, cached targets, machine-specific MCP configuration, build output, and packaged applications.
 
