@@ -18,8 +18,6 @@
 ### Web Application Pentesting (DAST)
 Agentic penetration testing using Claude AI. Paste URLs, the AI agent discovers attack surfaces, tests for OWASP Top 10 vulnerabilities, and reports confirmed findings with evidence.
 
-> The v1.2 downloads are retained for historical access and do not contain the current private-source fixes. No replacement binary has passed the current release build process yet.
-
 **[Download Mac](https://github.com/white-hat-lab/whitehatlab-downloads/releases/download/v1.2-dast/WhiteHatLabs-DAST-v1.2-Mac.zip)** | **[Download Windows](https://github.com/white-hat-lab/whitehatlab-downloads/releases/download/v1.2-dast/WhiteHatLabs-DAST-v1.2.exe)** | **[Release Notes](https://github.com/white-hat-lab/whitehatlab-downloads/releases/tag/v1.2-dast)**
 
 ---
@@ -27,16 +25,12 @@ Agentic penetration testing using Claude AI. Paste URLs, the AI agent discovers 
 ### SAST + SCA Scanner
 Static Application Security Testing + Software Composition Analysis. Upload source code or provide a GitHub repo URL for 11-step analysis with AI verification.
 
-> The v1.0 downloads are retained for historical access and do not contain the current SAST/SCA fixes. No replacement binary has passed the current release build process yet.
-
 **[Download Mac](https://github.com/white-hat-lab/whitehatlab-downloads/releases/download/v1.0-sast/WhiteHatLabs-SAST-v1.0-Mac.zip)** | **[Download Windows](https://github.com/white-hat-lab/whitehatlab-downloads/releases/download/v1.0-sast/WhiteHatLabs-SAST-v1.0.exe)** | **[Release Notes](https://github.com/white-hat-lab/whitehatlab-downloads/releases/tag/v1.0-sast)**
 
 ---
 
 ### Network Security Scanner
 Network security assessment — port scanning, service detection, vulnerability checks powered by Claude AI.
-
-> The v1.0 downloads are retained for historical access and do not contain the current private-source fixes. No replacement binary has passed the current release build process yet.
 
 **[Download Mac](https://github.com/white-hat-lab/whitehatlab-downloads/releases/download/v1.0-network/WhiteHatLabs-Network-v1.0-Mac.zip)** | **[Download Windows](https://github.com/white-hat-lab/whitehatlab-downloads/releases/download/v1.0-network/WhiteHatLabs-Network-v1.0.exe)** | **[Release Notes](https://github.com/white-hat-lab/whitehatlab-downloads/releases/tag/v1.0-network)**
 
