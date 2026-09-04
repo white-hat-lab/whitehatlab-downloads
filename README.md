@@ -15,7 +15,7 @@
 
 ## Scanners
 
-### Web Application Pentesting (DAST)
+### Web Application Pentesting (DAST) — legacy v1.2 package
 Agentic penetration testing using Claude AI. Paste URLs, the AI agent discovers attack surfaces, tests for OWASP Top 10 vulnerabilities, and reports confirmed findings with evidence.
 
 > The v1.2 downloads are retained for historical access and do not contain the current private-source fixes. No replacement binary has passed the current release build process yet.
@@ -24,24 +24,16 @@ Agentic penetration testing using Claude AI. Paste URLs, the AI agent discovers 
 
 ---
 
-### SAST + SCA Scanner
+### SAST + SCA Scanner — legacy v1.0 package
 Static Application Security Testing + Software Composition Analysis. Upload source code or provide a GitHub repo URL for 11-step analysis with AI verification.
 
-The SAST/SCA Docker image has passed the release workflow's startup health check and is available to authorized registry accounts. Full scan validation is pending. This image targets Linux AMD64; other architectures may require emulation.
+> The v1.0 downloads are retained for historical access and do not contain the current SAST/SCA fixes. No replacement binary has passed the current release build process yet.
 
-With Docker running and registry access configured:
-
-```bash
-docker login ghcr.io
-docker pull --platform linux/amd64 ghcr.io/white-hat-lab/whitehat-all-sast-sca:latest
-docker run --rm --platform linux/amd64 -p 127.0.0.1:5056:5056 -v whitehat-sast-data:/data ghcr.io/white-hat-lab/whitehat-all-sast-sca:latest
-```
-
-Open [SAST/SCA locally](http://localhost:5056). Contact support for registry access. The image contains extractable Python application files; keeping the source repository private does not hide those files from image recipients.
+**[Download Mac](https://github.com/white-hat-lab/whitehatlab-downloads/releases/download/v1.0-sast/WhiteHatLabs-SAST-v1.0-Mac.zip)** | **[Download Windows](https://github.com/white-hat-lab/whitehatlab-downloads/releases/download/v1.0-sast/WhiteHatLabs-SAST-v1.0.exe)** | **[Release Notes](https://github.com/white-hat-lab/whitehatlab-downloads/releases/tag/v1.0-sast)**
 
 ---
 
-### Network Security Scanner
+### Network Security Scanner — legacy v1.0 package
 Network security assessment — port scanning, service detection, vulnerability checks powered by Claude AI.
 
 > The v1.0 downloads are retained for historical access and do not contain the current private-source fixes. No replacement binary has passed the current release build process yet.
