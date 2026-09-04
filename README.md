@@ -15,7 +15,7 @@
 
 ## Scanners
 
-### Web Application Pentesting (DAST) — legacy v1.2 package
+### Web Application Pentesting (DAST)
 Agentic penetration testing using Claude AI. Paste URLs, the AI agent discovers attack surfaces, tests for OWASP Top 10 vulnerabilities, and reports confirmed findings with evidence.
 
 > The v1.2 downloads are retained for historical access and do not contain the current private-source fixes. No replacement binary has passed the current release build process yet.
@@ -24,7 +24,7 @@ Agentic penetration testing using Claude AI. Paste URLs, the AI agent discovers 
 
 ---
 
-### SAST + SCA Scanner — legacy v1.0 package
+### SAST + SCA Scanner
 Static Application Security Testing + Software Composition Analysis. Upload source code or provide a GitHub repo URL for 11-step analysis with AI verification.
 
 > The v1.0 downloads are retained for historical access and do not contain the current SAST/SCA fixes. No replacement binary has passed the current release build process yet.
@@ -33,7 +33,7 @@ Static Application Security Testing + Software Composition Analysis. Upload sour
 
 ---
 
-### Network Security Scanner — legacy v1.0 package
+### Network Security Scanner
 Network security assessment — port scanning, service detection, vulnerability checks powered by Claude AI.
 
 > The v1.0 downloads are retained for historical access and do not contain the current private-source fixes. No replacement binary has passed the current release build process yet.
