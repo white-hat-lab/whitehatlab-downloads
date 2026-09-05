@@ -25,7 +25,7 @@ Agentic penetration testing using Claude AI. Paste URLs, the AI agent discovers 
 ### SAST + SCA Scanner
 Static Application Security Testing + Software Composition Analysis. Paste a GitHub URL or upload a ZIP, pass the setup check, and pattern rules, taint tracking, CodeQL, Semgrep, dependency scanning and an AI review run end to end. Includes checks for AI and agent applications.
 
-**[Run with Docker](SAST_DOCKER.md)** | **[Download Mac](https://github.com/white-hat-lab/whitehatlab-downloads/releases/download/v1.0-sast/WhiteHatLabs-SAST-v1.0-Mac.zip)** | **[Download Windows](https://github.com/white-hat-lab/whitehatlab-downloads/releases/download/v1.0-sast/WhiteHatLabs-SAST-v1.0.exe)** | **[Release Notes](https://github.com/white-hat-lab/whitehatlab-downloads/releases/tag/v1.0-sast)**
+**[Run with Docker](SAST_DOCKER.md)** | **[Download Mac](https://github.com/white-hat-lab/whitehatlab-downloads/releases/download/v1.1-sast/WhiteHatLabs-SAST-v1.1-Mac.zip)** | **[Download Windows](https://github.com/white-hat-lab/whitehatlab-downloads/releases/download/v1.1-sast/WhiteHatLabs-SAST-v1.1.exe)** | **[Release Notes](https://github.com/white-hat-lab/whitehatlab-downloads/releases/tag/v1.1-sast)**
 
 ---
 
@@ -58,7 +58,7 @@ Docs: [Installation](READOUT_INSTALLATION.md) · [How The Read-Out Works](HOW_RE
 ## Prerequisites
 
 - Docker users (SAST/SCA): Docker Desktop or Docker Engine, plus a Claude subscription or an Anthropic API key. Claude Code is inside the image; sign in with `docker exec -it whitehat-sast claude auth login`.
-- Native packages (DAST, Network, legacy SAST): install [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code) with `npm install -g @anthropic-ai/claude-code` and run `claude` once in a terminal to sign in.
+- Native packages (DAST, SAST, Network): install [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code) with `npm install -g @anthropic-ai/claude-code` and run `claude` once in a terminal to sign in. The SAST package also needs Python 3.12 on PATH; its setup check installs the analysis tools each project needs.
 
 ## Current scanner release status
 

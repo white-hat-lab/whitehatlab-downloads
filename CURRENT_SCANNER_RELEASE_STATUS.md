@@ -15,3 +15,5 @@ No replacement native scanner binary is published in this repository yet:
 SAST/SCA is published as a Docker image (`ghcr.io/white-hat-lab/whitehat-all-sast-sca`). The image ships compiled bytecode (`.pyc`) only; `.py` sources are removed at build time. Bytecode can still be decompiled with effort, the same as the packaged native binaries, so this is a practical barrier, not a cryptographic one. The image is validated by the release workflow's clean-container health check before publication. DAST and network images remain unpublished.
 
 The next scanner binary release should be published only after its packaging inputs are made reproducible and the resulting artifact passes clean-machine startup and no-target smoke tests. No active scan against an external system is required for that release validation.
+
+Native SAST packages (v1.1, Mac and Windows) are built by CI from the same private source with PyInstaller and contain compiled bytecode only, like the Docker image.
