@@ -23,21 +23,9 @@ Agentic penetration testing using Claude AI. Paste URLs, the AI agent discovers 
 ---
 
 ### SAST + SCA Scanner
-Static Application Security Testing + Software Composition Analysis. Paste a GitHub URL or upload a ZIP. A pre-scan setup check verifies the AI agent and every tool the project needs, then pattern rules, taint tracking, CodeQL, Semgrep, language specialists, dependency scanning and an AI review run end to end. Each real issue is reported once; hygiene notes are kept separate. Dedicated checks for AI and agent applications (MCP servers, LLM tools, prompts).
+Static Application Security Testing + Software Composition Analysis. Paste a GitHub URL or upload a ZIP, pass the setup check, and pattern rules, taint tracking, CodeQL, Semgrep, dependency scanning and an AI review run end to end. Includes checks for AI and agent applications.
 
-**Run with Docker (current release):**
-
-```bash
-mkdir whitehat-sast && cd whitehat-sast
-curl -fsSLO https://raw.githubusercontent.com/white-hat-lab/whitehatlab-downloads/main/docker-compose.yml
-docker compose up -d
-docker exec -it whitehat-sast claude auth login   # once
-# open http://localhost:5056
-```
-
-Full guide: **[SAST_DOCKER.md](SAST_DOCKER.md)** (requirements, sign-in, running a scan, reading the report, upgrades, troubleshooting).
-
-Legacy native packages: [Mac v1.0](https://github.com/white-hat-lab/whitehatlab-downloads/releases/download/v1.0-sast/WhiteHatLabs-SAST-v1.0-Mac.zip) | [Windows v1.0](https://github.com/white-hat-lab/whitehatlab-downloads/releases/download/v1.0-sast/WhiteHatLabs-SAST-v1.0.exe) | [Release Notes](https://github.com/white-hat-lab/whitehatlab-downloads/releases/tag/v1.0-sast). These predate the Docker release and do not include the setup check or the AI-application checks.
+**[Run with Docker](SAST_DOCKER.md)** | **[Download Mac](https://github.com/white-hat-lab/whitehatlab-downloads/releases/download/v1.0-sast/WhiteHatLabs-SAST-v1.0-Mac.zip)** | **[Download Windows](https://github.com/white-hat-lab/whitehatlab-downloads/releases/download/v1.0-sast/WhiteHatLabs-SAST-v1.0.exe)** | **[Release Notes](https://github.com/white-hat-lab/whitehatlab-downloads/releases/tag/v1.0-sast)**
 
 ---
 
