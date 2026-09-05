@@ -1,0 +1,18 @@
+# WhiteHatLabs SAST + SCA — run with: docker compose up -d
+services:
+  whitehat-sast:
+    image: ghcr.io/white-hat-lab/whitehat-all-sast-sca:latest
+    container_name: whitehat-sast
+    platform: linux/amd64
+    ports:
+      - "127.0.0.1:5056:5056"      # UI only reachable from this computer
+    volumes:
+      - whitehat-data:/data          # scans, reports, caches, Claude sign-in
+    environment:
+      # Optional: use an Anthropic API key instead of signing in with Claude Code.
+      # - ANTHROPIC_API_KEY=sk-ant-...
+      - AISAST_AI_WORKERS=5
+    restart: unless-stopped
+
+volumes:
+  whitehat-data:

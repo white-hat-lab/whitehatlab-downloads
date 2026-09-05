@@ -23,9 +23,21 @@ Agentic penetration testing using Claude AI. Paste URLs, the AI agent discovers 
 ---
 
 ### SAST + SCA Scanner
-Static Application Security Testing + Software Composition Analysis. Upload source code or provide a GitHub repo URL for 11-step analysis with AI verification.
+Static Application Security Testing + Software Composition Analysis. Paste a GitHub URL or upload a ZIP. A pre-scan setup check verifies the AI agent and every tool the project needs, then pattern rules, taint tracking, CodeQL, Semgrep, language specialists, dependency scanning and an AI review run end to end. Each real issue is reported once; hygiene notes are kept separate. Dedicated checks for AI and agent applications (MCP servers, LLM tools, prompts).
 
-**[Download Mac](https://github.com/white-hat-lab/whitehatlab-downloads/releases/download/v1.0-sast/WhiteHatLabs-SAST-v1.0-Mac.zip)** | **[Download Windows](https://github.com/white-hat-lab/whitehatlab-downloads/releases/download/v1.0-sast/WhiteHatLabs-SAST-v1.0.exe)** | **[Release Notes](https://github.com/white-hat-lab/whitehatlab-downloads/releases/tag/v1.0-sast)**
+**Run with Docker (current release):**
+
+```bash
+mkdir whitehat-sast && cd whitehat-sast
+curl -fsSLO https://raw.githubusercontent.com/white-hat-lab/whitehatlab-downloads/main/docker-compose.yml
+docker compose up -d
+docker exec -it whitehat-sast claude auth login   # once
+# open http://localhost:5056
+```
+
+Full guide: **[SAST_DOCKER.md](SAST_DOCKER.md)** (requirements, sign-in, running a scan, reading the report, upgrades, troubleshooting).
+
+Legacy native packages: [Mac v1.0](https://github.com/white-hat-lab/whitehatlab-downloads/releases/download/v1.0-sast/WhiteHatLabs-SAST-v1.0-Mac.zip) | [Windows v1.0](https://github.com/white-hat-lab/whitehatlab-downloads/releases/download/v1.0-sast/WhiteHatLabs-SAST-v1.0.exe) | [Release Notes](https://github.com/white-hat-lab/whitehatlab-downloads/releases/tag/v1.0-sast). These predate the Docker release and do not include the setup check or the AI-application checks.
 
 ---
 
@@ -57,12 +69,12 @@ Docs: [Installation](READOUT_INSTALLATION.md) · [How The Read-Out Works](HOW_RE
 
 ## Prerequisites
 
-1. Install [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code): `npm install -g @anthropic-ai/claude-code`
-2. Run `claude` once in terminal to sign in
+- Docker users (SAST/SCA): Docker Desktop or Docker Engine, plus a Claude subscription or an Anthropic API key. Claude Code is inside the image; sign in with `docker exec -it whitehat-sast claude auth login`.
+- Native packages (DAST, Network, legacy SAST): install [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code) with `npm install -g @anthropic-ai/claude-code` and run `claude` once in a terminal to sign in.
 
 ## Current scanner release status
 
-The fixed scanner source is consolidated in a private source-of-truth repository. Current private Docker build definitions exist for DAST, SAST/SCA, and network delivery, but no public container image is published because Python source can be extracted from image layers. See [CURRENT_SCANNER_RELEASE_STATUS.md](CURRENT_SCANNER_RELEASE_STATUS.md) for the validation and artifact policy.
+The scanner source is private. The SAST/SCA scanner is delivered as a Docker image built from that source; the image contains compiled bytecode and the bundled analysis tools, not the Python source files. See [CURRENT_SCANNER_RELEASE_STATUS.md](CURRENT_SCANNER_RELEASE_STATUS.md).
 
 ## Quick Start (macOS)
 ```bash

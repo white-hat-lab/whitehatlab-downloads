@@ -1,6 +1,6 @@
 # Current scanner release status
 
-Updated August 10, 2026.
+Updated September 5, 2026.
 
 The DAST v1.2, SAST/SCA v1.0, and network v1.0 downloads are legacy packages. They remain available for historical access, but they are not presented as builds of the current fixed scanner code.
 
@@ -12,6 +12,6 @@ No replacement native scanner binary is published in this repository yet:
 - the existing SAST packaging specifications refer to private/machine-local files that are not part of the clean source tree;
 - a binary built from those incomplete inputs would not be a validated release.
 
-No public Docker registry image is published. Python application files in a container image are readily extractable, which would conflict with the private-source distribution policy.
+SAST/SCA is published as a Docker image (`ghcr.io/white-hat-lab/whitehat-all-sast-sca`). The image ships compiled bytecode (`.pyc`) only; `.py` sources are removed at build time. Bytecode can still be decompiled with effort, the same as the packaged native binaries, so this is a practical barrier, not a cryptographic one. The image is validated by the release workflow's clean-container health check before publication. DAST and network images remain unpublished.
 
 The next scanner binary release should be published only after its packaging inputs are made reproducible and the resulting artifact passes clean-machine startup and no-target smoke tests. No active scan against an external system is required for that release validation.
