@@ -25,7 +25,7 @@ Agentic penetration testing using Claude AI. Paste URLs, the AI agent discovers 
 ### SAST + SCA Scanner
 Static Application Security Testing + Software Composition Analysis. Paste a GitHub URL or upload a ZIP, pass the setup check, and pattern rules, taint tracking, CodeQL, Semgrep, dependency scanning and an AI review run end to end. Includes checks for AI and agent applications.
 
-**[Run with Docker](SAST_DOCKER.md)** | **[Docker image](https://github.com/white-hat-lab/whitehat-all/pkgs/container/whitehat-all-sast-sca)** | **[Release Notes](https://github.com/white-hat-lab/whitehatlab-downloads/releases/tag/v1.0-sast)**
+**[Run with Docker](SAST_DOCKER.md)** | **[Download Mac](https://github.com/white-hat-lab/whitehatlab-downloads/releases/download/v1.0-sast/WhiteHatLabs-SAST-v1.0-Mac.zip)** | **[Download Windows](https://github.com/white-hat-lab/whitehatlab-downloads/releases/download/v1.0-sast/WhiteHatLabs-SAST-v1.0.exe)** | **[Release Notes](https://github.com/white-hat-lab/whitehatlab-downloads/releases/tag/v1.0-sast)**
 
 ---
 
@@ -64,14 +64,14 @@ Docs: [Installation](READOUT_INSTALLATION.md) · [How The Read-Out Works](HOW_RE
 
 The scanner source is private. The SAST/SCA scanner is delivered as a Docker image built from that source; the image contains compiled bytecode and the bundled analysis tools, not the Python source files. See [CURRENT_SCANNER_RELEASE_STATUS.md](CURRENT_SCANNER_RELEASE_STATUS.md).
 
-## Quick Start (macOS, native DAST / Network packages)
+## Quick Start (macOS)
 ```bash
 # After downloading and unzipping:
 xattr -cr WhiteHatLabs.app    # Required once — removes macOS quarantine
 open WhiteHatLabs.app          # Opens the scanner
 ```
 
-## Quick Start (Windows, native DAST / Network packages)
+## Quick Start (Windows)
 1. Download the .exe
 2. If SmartScreen blocks: Click **"More info"** > **"Run anyway"**
 3. Open `http://localhost:5050` in your browser
